@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.3.14">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores por extenso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <label for="contrato">Contrato:</label>
+    <div class="input-container">
+        <input type="text" id="contrato" oninput="updateCont('contrato')">
+        <div class="copy-button-container">
+            <button class="copy-button" onclick="copyText('contratoText')">Copiar</button>
+        </div>
+    </div><span id="contratoText"></span><br>
+    
+    <label for="aditivo">Aditivo:</label>
+    <div class="input-container">
+        <input type="text" id="aditivo" oninput="updateCont('aditivo')">
+        <div class="copy-button-container">
+            <button class="copy-button" onclick="copyText('aditivoText')">Copiar</button>
+        </div>
+    </div><span id="aditivoText"></span><br>
+    
+    <label for="percentual">Percentual:</label>
+    <div class="input-container">
+        <input type="text" id="percentual" oninput="updatePct('percentual')">
+		<div class="calc-button-container">
+            <button class="copy-button" onclick="alert('percentualText')">Calcular</button>
+        </div>
+        <div class="copy-button-container">
+            <button class="copy-button" onclick="copyText('percentualText')">Copiar</button>
+        </div>
+    </div><span id="percentualText"></span> 
+    <script src="https://cdn.jsdelivr.net/npm/extenso@2.0.1/dist/extenso.min.js">
+    </script> 
+    <script src="js.js">
+    </script>
+</body>
+</html>

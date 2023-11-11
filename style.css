@@ -1,0 +1,40 @@
+    body {
+      margin:10 px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-container {
+      display: flex;
+    }
+
+    input {
+      margin-bottom: 10px;
+      flex: 0;
+    }
+
+    span {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .copy-button {
+      cursor: pointer;
+      background-color: #2f2f2f;
+      color: white;
+      border: 1px solid #2f2f2f;
+      padding: 2px 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline;
+      font-size: 14px;
+      margin-left: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .copy-button:hover {
+      background-color: #2980b9;
+    }
