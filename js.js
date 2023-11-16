@@ -1,11 +1,10 @@
 function updateCont(inputId) {
   var inputValue = document.getElementById(inputId).value;
+  var num = curtofloat(inputValue);
   var textSpanId = inputId + 'Text';
   document.getElementById(textSpanId).innerText = 
-  "R$"+ inputValue +" ("+
-  extenso(inputValue, {
-    mode: 'currency'
-  })+ ")"; 
+  num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) +
+  ""
 }
 
 function updatePct(inputId) {
@@ -25,4 +24,8 @@ function copyText(spanId) {
   tempInput.select();
   document.execCommand('copy');
   document.body.removeChild(tempInput);
+}
+
+function curtofloat(x){
+  return Number(x.replaceAll(".","").replaceAll(",",".").replace(/[^0-9.-]+/,""));
 }
