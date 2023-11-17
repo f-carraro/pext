@@ -4,7 +4,7 @@ function updateCont(inputId) {
   var textSpanId = inputId + 'Text';
   document.getElementById(textSpanId).innerText = 
   num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) +
-  " (" +   extenso(inputValue, {mode: 'currency'}).replace("de reais","reais") + ")"
+  " (" + extenso(num.toFixed(2).replace(".",","), {mode: 'currency'}).replace("de reais","reais") + ")"
 
 }
 
