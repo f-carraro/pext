@@ -17,6 +17,18 @@ function updatePct(inputId) {
   " por cento)";
 }
 
+function calculate(){
+  var contrato = curtofloat(document.getElementById('contrato').value)
+  var aditivo = curtofloat(document.getElementById('aditivo').value)
+  var pct = (aditivo/contrato*100).toFixed(2).replace(".",",");
+
+  document.getElementById('percentual').value = pct;
+  document.getElementById('percentualText').innerText = 
+  pct +"% ("+
+  extenso(pct, { number: { decimal: 'informal' } }) +
+  " por cento)";
+}
+
 function copyText(spanId) {
   var textToCopy = document.getElementById(spanId).innerText;
   var tempInput = document.createElement('textarea');
